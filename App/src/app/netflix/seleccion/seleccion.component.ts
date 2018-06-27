@@ -9,6 +9,8 @@ export class SeleccionComponent implements OnInit, OnDestroy, OnChanges {
 
   @Input() imagen: string;
   @Input() texto: string;
+  @Output() selecciono: EventEmitter<string>
+    = new EventEmitter();
 
 
   // Propiedad del web component
@@ -43,6 +45,11 @@ export class SeleccionComponent implements OnInit, OnDestroy, OnChanges {
 
   ngOnChanges(cambios) {
     console.log('On Changes', cambios);
+  }
+
+  seleccionoUsuario() {
+    console.log('Selecciono', this.texto);
+    this.selecciono.emit(this.texto);
   }
 
 

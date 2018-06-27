@@ -1,7 +1,11 @@
 
-<div class="row">
+<div class="row contenedor"
+     (click)="seleccionoUsuario()"
+>
   <div class="col-sm-12">
-    <img [src]="imagen" alt="">
+    <img class="borde"
+         [src]="imagen"
+         alt="">
   </div>
   <div class="col-sm-12">
     <p>{{texto}}</p>
