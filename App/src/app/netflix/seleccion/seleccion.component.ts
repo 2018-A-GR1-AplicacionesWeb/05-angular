@@ -52,5 +52,4 @@ export class SeleccionComponent implements OnInit, OnDestroy, OnChanges {
     this.selecciono.emit(this.texto);
   }
 
-
 }
