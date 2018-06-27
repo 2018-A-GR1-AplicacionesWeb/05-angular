@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnDestroy, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-seleccion',
@@ -7,7 +7,14 @@ import {Component, Input, OnChanges, OnDestroy, OnInit} from '@angular/core';
 })
 export class SeleccionComponent implements OnInit, OnDestroy, OnChanges {
 
+  @Input() imagen: string;
+  @Input() texto: string;
+
+
+  // Propiedad del web component
   @Input() contador;
+  // EVENTO del web component
+  @Output() cambioElContador = new EventEmitter();
 
   constructor() {
     // Configuracion de servicios (providers) u otras configuraciones
@@ -15,7 +22,11 @@ export class SeleccionComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   aumentarContador() {
-    this.contador = this.contador + 1
+
+    this.contador = this.contador + 1;
+
+    this.cambioElContador
+      .emit(this.contador);
   }
 
   ngOnInit() {

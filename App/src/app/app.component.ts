@@ -39,5 +39,12 @@ export class AppComponent {
   }
 
 
+  actualizarContador(contadorHijo) {
+    console.log('Se ejecuto', contadorHijo);
+
+    this.contadorDesdePapa = contadorHijo;
+  }
+
+
 }
 
