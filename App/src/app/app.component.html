@@ -8,12 +8,13 @@
   </div>
   <div class="row">
     <div class="col-sm-1"></div>
-    <div class="col-sm-2">
+    <div class="col-sm-2"
+         *ngFor="let usuario of arregloUsuarios"
+    >
       <app-seleccion
-        [texto]="'tatis1909'"
-        [imagen]="'/assets/perfil.png'"
+        [texto]="usuario.texto"
+        [imagen]="usuario.imagen"
       >
-
       </app-seleccion>
     </div>
     <div class="col-sm-1"></div>

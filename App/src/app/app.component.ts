@@ -20,22 +20,22 @@ export class AppComponent {
     },
     {
       id:2,
-      imagen:'/assets/perfil1.png',
+      imagen:'/assets/perfil2.png',
       texto:'pedro'
     },
     {
       id:3,
-      imagen:'/assets/perfil2.png',
+      imagen:'/assets/perfil3.png',
       texto:'Jeff'
     },
     {
       id:4,
-      imagen:'/assets/perfil3.png',
+      imagen:'/assets/perfil4.png',
       texto:'Edd'
     },
     {
       id:5,
-      imagen:'/assets/perfil4.png',
+      imagen:'/assets/perfil5.png',
       texto:'Nancy'
     }
   ];

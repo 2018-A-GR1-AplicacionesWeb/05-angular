@@ -19,4 +19,9 @@ h1 {
   border-width: 0.12rem;
   border-color:  #8d8d8d;
 }
+.perfiles:hover {
+  color:  #fff;
+  border-color:  #fff;
+  cursor: pointer;
+}
 
