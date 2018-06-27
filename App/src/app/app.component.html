@@ -1,8 +1,19 @@
 
 <h1>Componente seleccion</h1>
 
-<app-seleccion></app-seleccion>
+<div *ngIf="mostrarComponente">
+  <app-seleccion
+    [contador]="0"
+  >
 
+  </app-seleccion>
+</div>
+
+<button class="btn btn-info"
+        (click)="mostrarComponente = !mostrarComponente"
+>
+  Cambiar mostrar seleccion
+</button>
 
 <!--
 

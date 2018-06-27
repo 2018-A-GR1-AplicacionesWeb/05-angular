@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnDestroy, OnInit} from '@angular/core';
+import {Component, Input, OnChanges, OnDestroy, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-seleccion',
@@ -7,12 +7,23 @@ import {Component, OnChanges, OnDestroy, OnInit} from '@angular/core';
 })
 export class SeleccionComponent implements OnInit, OnDestroy, OnChanges {
 
+  @Input() contador;
+
   constructor() {
+    // Configuracion de servicios (providers) u otras configuraciones
     console.log('Constructor');
   }
 
+  aumentarContador() {
+    this.contador = this.contador + 1
+  }
+
   ngOnInit() {
+    // Empezar la logica de la pantalla
+
     console.log('On Init');
+
+    console.log('Contador: ', this.contador);
   }
 
   ngOnDestroy() {
