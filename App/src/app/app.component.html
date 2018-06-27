@@ -1,13 +1,17 @@
-
 <h1>Componente seleccion</h1>
 
 <div *ngIf="mostrarComponente">
   <app-seleccion
-    [contador]="0"
+    [contador]="contadorDesdePapa"
   >
-
   </app-seleccion>
 </div>
+
+<button class="btn btn-success"
+        (click)="contadorDesdePapa = contadorDesdePapa + 1"
+>
+  Aumentar valor de contador
+</button>
 
 <button class="btn btn-info"
         (click)="mostrarComponente = !mostrarComponente"

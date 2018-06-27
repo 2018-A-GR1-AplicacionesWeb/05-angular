@@ -30,8 +30,8 @@ export class SeleccionComponent implements OnInit, OnDestroy, OnChanges {
     console.log('On Destroy');
   }
 
-  ngOnChanges() {
-    console.log('On Changes');
+  ngOnChanges(cambios) {
+    console.log('On Changes', cambios);
   }
 
 
