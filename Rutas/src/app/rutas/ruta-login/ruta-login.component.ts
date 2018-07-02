@@ -21,20 +21,14 @@ export class RutaLoginComponent implements OnInit {
   login() {
     this._credencialesService
       .login(this.password);
-    if (this._credencialesService.estaLogeado) {
-      console.log('Se va a la ruta');
-      // localhost:4200/#/home/usuario/1/epn
-      const rutaHomeUsuario = [
-        '/home',
-        'usuario',
-        1,
-        'epn'
-      ];
-      this._router.navigate(rutaHomeUsuario);
-    } else {
-      console.log('Muestra el error');
-      alert('Credenciales invalidas');
-    }
+    const rutaHomeUsuario = [
+      '/home',
+      'usuario',
+      1,
+      'epn'
+    ];
+    this._router.navigate(rutaHomeUsuario);
+
   }
 
 }
