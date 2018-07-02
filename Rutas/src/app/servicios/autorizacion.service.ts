@@ -30,8 +30,6 @@ export class AutorizacionService implements CanActivate {
       this._router.navigate(url);
       return permisos;
     }
-
   }
-
 
 }

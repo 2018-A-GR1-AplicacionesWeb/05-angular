@@ -13,6 +13,7 @@ import {AutorizacionService} from "./servicios/autorizacion.service";
 import {CredencialesService} from "./servicios/credenciales.service";
 import {RutaLoginComponent} from './rutas/ruta-login/ruta-login.component';
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -25,14 +26,15 @@ import {FormsModule} from "@angular/forms";
     RutaLoginComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, // ngif ngfor
     RouterModule.forRoot(
       RUTAS_APP,
       {
         useHash: true
       }
-    ),
-    FormsModule
+    ), // rutas
+    FormsModule, // ngModel formularios
+    HttpClientModule // Form
   ],
   providers: [
     AutorizacionService,
