@@ -8,7 +8,21 @@ import {Component} from '@angular/core';
 export class AppComponent {
   title = 'app';
 
+  email;
+  password;
+  passwordConfirmation;
+
   ingresarUsuario(formulario) {
-    console.log(formulario);
+
+    const valorActualPassword = formulario
+      .controls.password.value;
+    const valorActualPasswordConfirmation = formulario.controls.passwordConfirmation.value;
+
+    if (valorActualPassword === valorActualPasswordConfirmation) {
+      alert('BIEN!');
+    } else {
+      alert('Los passwords no son iguales');
+    }
+
   }
 }
