@@ -22,10 +22,10 @@ export class RutaLoginComponent implements OnInit {
     this._credencialesService
       .login(this.password);
     const rutaHomeUsuario = [
-      '/home',
-      'usuario',
-      1,
-      'epn'
+      '/home', // Segmentos
+      'usuario', // Segmentos
+      1, // Segmentos
+      'epn' // Segmentos
     ];
     this._router.navigate(rutaHomeUsuario);
 
