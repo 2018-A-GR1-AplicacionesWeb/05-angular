@@ -16,12 +16,15 @@ export class AppComponent {
 
     const valorActualPassword = formulario
       .controls.password.value;
+
     const valorActualPasswordConfirmation = formulario.controls.passwordConfirmation.value;
 
     if (valorActualPassword === valorActualPasswordConfirmation) {
       alert('BIEN!');
     } else {
       alert('Los passwords no son iguales');
+      this.password = undefined;
+      this.passwordConfirmation = undefined;
     }
 
   }
